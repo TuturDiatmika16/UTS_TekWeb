@@ -9,7 +9,6 @@ class penerbangan extends Model
 {
     use HasFactory;
     protected $table = "penerbangan";
-    // protected $fillable = []; // table apa saja yang bisa di isi
     protected $guarded = []; // table apa saja yang tidak boleh di isi
 
     public function asal()

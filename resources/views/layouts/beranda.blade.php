@@ -86,15 +86,14 @@
             <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
                 <nav>
                     <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Tickets</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Informasi</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Informasi Penerbangan</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">About</a></li>
                     </ul>
                 </nav>
             </div>
-
-            <div class="order-1 md:order-2">
-                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
+            <img class="h-8 w-auto sm-16" src="{{ asset('/images/logo.jpg') }}">
+            <div class="inlinte-text">
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl ">
                     Welcome to Diatmika's Travel!
                 </a>
             </div>
@@ -205,107 +204,100 @@ Alternatively if you want to just have a single hero
 </section>
 
 -->
-
-<div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-      <!--
-        Background overlay, show/hide based on modal state.
-  
-        Entering: "ease-out duration-300"
-          From: "opacity-0"
-          To: "opacity-100"
-        Leaving: "ease-in duration-200"
-          From: "opacity-100"
-          To: "opacity-0"
-      -->
-      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-  
-      <!-- This element is to trick the browser into centering the modal contents. -->
-      <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-  
-      <!--
-        Modal panel, show/hide based on modal state.
-  
-        Entering: "ease-out duration-300"
-          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          To: "opacity-100 translate-y-0 sm:scale-100"
-        Leaving: "ease-in duration-200"
-          From: "opacity-100 translate-y-0 sm:scale-100"
-          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-      -->
-      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-          <div class="sm:flex sm:items-start">
-            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-              <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                Cari harga tiket pesawat dengan biaya murah dan terjangkau disini!
-              </h3>
-
-            {{-- Radio Input --}}
-
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="radio"
-                      class="form-radio"
-                      name="radio"
-                      value="1"
-                      checked
-                    />
-                    <span class="ml-2">Sekali Jalan</span>
-                  </label>
-                  <label class="inline-flex items-center">
-                    <input type="radio" class="form-radio" name="radio" value="2" />
-                    <span class="ml-2">Pulang-Pergi</span>
-                  </label>
-                </div>
+    <div class="grid">
+        <div class="pt-5 px-8 shadow-md rounded-md text-center font-bold" style="max-width: 100%">
+            <label class="block">
+            <span class="text-gray-700">Cari Harga Tiket Pesawat Murah dan Terjangkau Disini!</span>
+            </label>
+            <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    class="form-radio"
+                    name="radio"
+                    value="1"
+                    checked
+                  />
+                  <span class="ml-2">Sekali Jalan</span>
+                </label>
+                <label class="inline-flex items-center">
+                  <input type="radio" class="form-radio" name="radio" value="2" />
+                  <span class="ml-2">Pulang-Pergi</span>
+                </label>
               </div>
+              <br>
+
+            <div class="grid grid-cols-6">
+                <label class="block text-left" style="max-width: 400px">
+                    <span class="text-gray-700">Lokasi Dari</span>
+                        <select class="form-select block w-full mt-1">
+                            <option>Jakarta</option>
+                            <option>Bandung</option>
+                            <option>Yogyakarta</option>
+                            <option>Palembang</option>
+                            <option>Solo</option>
+                            <option>Semarang</option>
+                            <option>Bali</option>
+                            <option>Medan</option>
+                            <option>Surabaya</option>
+                            <option>Malang</option>
+                            <option>Bogor</option>
+                            <option>Makassar</option>
+                        </select>
+                </label>
+                <label class="block text-left" style="max-width: 400px">
+                    <span class="text-gray-700">Tujuan</span>
+                        <select class="form-select block w-full mt-1">
+                            <option>Bali</option>
+                            <option>Medan</option>
+                            <option>Surabaya</option>
+                            <option>Malang</option>
+                            <option>Bogor</option>
+                            <option>Makassar</option>
+                            <option>Jakarta</option>
+                            <option>Bandung</option>
+                            <option>Yogyakarta</option>
+                            <option>Palembang</option>
+                            <option>Solo</option>
+                            <option>Semarang</option>
+                        </select>
+                </label>
+                <label class="block text-left" style="max-width: 400px">
+                    
+                    <span class="text-gray-700">Berangkat</span>
+                    <input type="date" class="form-date" name="date" value="2" />
+                </label>
+                <label class="block text-left" style="max-width: 400px">
+                    <span class="text-gray-700">Pulang</span>
+                    <input type="date" class="form-date" name="date" value="2" />
+                </label>
+                <label class="block text-left" style="max-width: 400px">
+                    <span class="text-gray-700">Penumpang</span>
+                        <select class="form-select block w-full mt-1">
+                            <option>Dewasa</option>
+                            <option>Remaja</option>
+                            <option>Anak-anak</option>
+                        </select>
+                </label>
+                <label class="block text-left" style="max-width: 400px">
+                    <span class="text-gray-700">Kelas</span>
+                        <select class="form-select block w-full mt-1">
+                            <option>VVIP</option>
+                            <option>VIP</option>
+                            <option>First Class</option>
+                            <option>Ekonomi</option>
+                            <option>Bisnis</option>
+                        </select>
+                </label>
             </div>
-                <div class="grid grid-cols-5">
-                    <label class="block text-left" style="max-width: 400px">
-                        <span class="text-gray-700">Lokasi Dari</span>
-                            <select class="form-select block w-full mt-1">
-                                <option>Jakarta</option>
-                                <option>Bandung</option>
-                            </select>
-                        </label>
-                        <label class="block text-left" style="max-width: 400px">
-                            <span class="text-gray-700">Tujuan</span>
-                            <select class="form-select block w-full mt-1">
-                                <option>Bali</option>
-                                <option>Medan</option>
-                            </select>
-                        </label>
-                        <label class="block text-left" style="max-width: 400px">
-                            
-                            <span class="text-gray-700">Berangkat</span>
-                            <input type="date" class="form-date" name="date" value="2" />
-                        </label>
-                        <label class="block text-left" style="max-width: 400px">
-                            <span class="text-gray-700">Pulang</span>
-                            <input type="date" class="form-date" name="date" value="2" />
-                        </label>
-                        <label class="block text-left" style="max-width: 400px">
-                            <span class="text-gray-700">Penumpang</span>
-                                <select class="form-select block w-full mt-1">
-                                    <option>opsi1</option>
-                                    <option>opsi2</option>
-                                </select>
-                        </label>
-                </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+                  Cari Penerbangan!
+                </button>
             </div>
-          </div>
         </div>
-        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-          <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
-            Cari Penerbangan!
-          </button>
-        </div>
-      </div>
     </div>
-  </div>
+
 
   {{-- Most Popular Journey! --}}
     <section class="bg-white py-8">
@@ -318,27 +310,21 @@ Alternatively if you want to just have a single hero
                     <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl ">
 				Most Popular Journey!
 			</a>
-
-                    <div class="flex items-center" id="store-nav-content">
-
-                        <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-                            <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
-                            </svg>
-                        </a>
-
-                        <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-                            <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
-                            </svg>
-                        </a>
-
-                    </div>
+                <div class="flex items-center" id="store-nav-content">
+                    <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+                        <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
+                        </svg>
+                    </a>
+                    <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+                        <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
+                        </svg>
+                    </a>
+                </div>
               </div>
             </nav>
-
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/Sydney.jpg') }}>
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Sydney</p>
@@ -346,12 +332,9 @@ Alternatively if you want to just have a single hero
                             <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
                         </svg>
                     </div>
-                    <p class="pt-1 text-gray-900">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ipsam eligendi reprehenderit earum. Repellendus saepe ipsum sint, omnis adipisci itaque. Fuga voluptatibus maiores corporis illo, sequi cupiditate optio nihil a.</p>
-                </a>
+                    <p class="pt-1 text-gray-900">Sydney Opera House merupakan salah satu bangunan abad ke-20 yang paling unik dan terkenal. Gedung ini terletak di Bennerlong Point di Sydney Harbour Bridge dan pemandangan kedua bangunan ini menjadi ikon tersendiri bagi Australia.</p>
             </div>
-
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/Bali.jpg') }}>
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Bali</p>
@@ -359,25 +342,19 @@ Alternatively if you want to just have a single hero
                             <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
                         </svg>
                     </div>
-                    <p class="pt-1 text-gray-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis labore fuga minima soluta nostrum, suscipit iusto velit. Praesentium quasi ex quos, culpa minima nisi, impedit ad veniam, saepe autem harum!</p>
-                </a>
+                    <p class="pt-1 text-gray-900">Di Dunia, Bali terkenal sebagai tujuan pariwisata dengan keunikan berbagai hasil seni budayanya, khususnya bagi para wisatawan Jepang dan Australia. Bali juga dikenal dengan julukan Pulau Dewata dan Pulau Seribu.</p>
             </div>
-
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/Singapore.jpeg') }}>
                     <div class="pt-3 flex items-center justify-between">
-                        <p class="">Singapore</p>
+                        <p class="">Singapura</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
                         </svg>
                     </div>
-                    <p class="pt-1 text-gray-900">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure laudantium aut neque eligendi excepturi sequi repudiandae, odio voluptatum necessitatibus eos vel nesciunt iusto beatae. Assumenda non consequatur fuga placeat eaque.</p>
-                </a>
+                    <p class="pt-1 text-gray-900">Singapura memiliki industri pariwisata yang berkembang baik, dengan lebih dari 8 juta pengunjung pada 2004. Singapura telah tercatat di antara wisatawan mancanegara sebagai tujuan wisata yang menarik, membuat pariwisata salah satu dari industri besar di Singapura</p>
             </div>
-
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/london.jpg') }}>
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">London Bridge</p>
@@ -386,11 +363,8 @@ Alternatively if you want to just have a single hero
                         </svg>
                     </div>
                     <p class="pt-1 text-gray-900">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum repellat numquam repudiandae odit eum sunt veniam, optio sint sapiente, inventore aliquid? Optio veritatis assumenda architecto earum distinctio, dolores laborum et.</p>
-                </a>
             </div>
-
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/Kyoto.jpg') }}>
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Kyoto</p>
@@ -399,11 +373,8 @@ Alternatively if you want to just have a single hero
                         </svg>
                     </div>
                     <p class="pt-1 text-gray-900">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore architecto temporibus sapiente officiis, delectus quidem consectetur numquam aut quas autem natus consequuntur illo odio similique accusantium, distinctio expedita pariatur! Vero.</p>
-                </a>
             </div>
-
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/Beijing.jfif') }}>
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Beijing</p>
@@ -412,11 +383,8 @@ Alternatively if you want to just have a single hero
                         </svg>
                     </div>
                     <p class="pt-1 text-gray-900">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, error doloremque deleniti, et quibusdam magni dolore nam illum quis odio accusantium numquam aliquam, nisi iste tenetur? Modi laboriosam consequuntur voluptates?</p>
-                </a>
             </div>
-
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/korea.jpg') }}>
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Korea</p>
@@ -425,11 +393,9 @@ Alternatively if you want to just have a single hero
                         </svg>
                     </div>
                     <p class="pt-1 text-gray-900">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vel facere sunt nemo dolor quod asperiores laudantium accusantium adipisci aspernatur sed suscipit, et nulla unde voluptate, eius est atque! Architecto!</p>
-                </a>
             </div>
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/india.jpg') }}>
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">India</p>
@@ -438,13 +404,9 @@ Alternatively if you want to just have a single hero
                         </svg>
                     </div>
                     <p class="pt-1 text-gray-900">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vel facere sunt nemo dolor quod asperiores laudantium accusantium adipisci aspernatur sed suscipit, et nulla unde voluptate, eius est atque! Architecto!</p>
-                </a>
             </div>
-
             </div>
-
     </section>
-
 
     <footer class="bg-gray-700 text-gray-100 x-2 pt-0 pb-2 mt-0">
         <div class="container mx-auto py-8">

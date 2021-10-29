@@ -26,6 +26,11 @@ class CreateDbSetup extends Migration
             $table->string('no_telp', 15);
             $table->string('pekerjaan', 100);
             $table->timestamps();
+
+            // $table->foreign('id')->references('id')->on('pemesanan')
+            //     ->onUpdate('cascade')->onDelete('cascade');
+            // $table->foreign('id')->references('id')->on('pembayaran')
+            //     ->onUpdate('cascade')->onDelete('cascade');
         });
 
         Schema::create('penerbangan', function (Blueprint $table) {
@@ -40,6 +45,8 @@ class CreateDbSetup extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('tujuan')->references('id')->on('lokasi')
                 ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_penerbangan')->references('id')->on('penumpang')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
 
         Schema::create('pemesanan', function (Blueprint $table) {
@@ -47,6 +54,9 @@ class CreateDbSetup extends Migration
             $table->date('tgl_pemesanan');
             $table->string('no_tiket', 15);
             $table->timestamps();
+
+            // $table->foreign('id_pemesanan')->references('id')->on('penumpang')
+            //     ->onUpdate('cascade')->onDelete('cascade');
         });
 
         Schema::create('kelas', function (Blueprint $table) {
@@ -54,11 +64,17 @@ class CreateDbSetup extends Migration
             $table->string('jenis_kelas', 20);
             $table->string('harga_tiket', 20);
             $table->timestamps();
+
+            // $table->foreign('id')->references('id')->on('pembayaran')
+            //     ->onUpdate('cascade')->onDelete('cascade');
         });
         Schema::create('pembayaran', function (Blueprint $table) {
             $table->id();
             $table->string('tgl_pembayaran', 50);
             $table->timestamps();
+
+            // $table->foreign('id_pembayaran')->references('id')->on('kelas')
+            //     ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
