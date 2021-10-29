@@ -21,18 +21,17 @@ Route::get('/login', function () {
     return view('login');
 })->middleware(['auth'])->name('login');
 
-Route::get('/admin', function () {
-    return view('admin.admin');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/admin', function () {
+        return view('admin.admin');
+    });
+
+    Route::get('/dashboard', function () {
+        return view('layouts.beranda');
+    })->name('dashboard');
+
+    Route::get('/ticket', function () {
+        return view('layouts.ticket');
+    });
 });
-
-Route::get('/beranda', function () {
-    return view('layouts.beranda');
-})->name('beranda');
-
-Route::get('/ticket', function () {
-    return view('layouts.ticket');
-});
-
-
-
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

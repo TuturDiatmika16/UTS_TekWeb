@@ -88,6 +88,12 @@
                     <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Informasi Penerbangan</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">About</a></li>
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                <button type="submit" class="inline-block no-underline hover:text-black hover:underline py-2 px-4">logout</button>
+                                @csrf
+                            </form>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -144,7 +150,7 @@
 
                     <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-white text-4xl my-4">Karnataka, India</p>
+                            <p class="text-white text-4xl my-4">Mysore Palace, India</p>
                         </div>
                     </div>
 
@@ -362,7 +368,7 @@ Alternatively if you want to just have a single hero
                             <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
                         </svg>
                     </div>
-                    <p class="pt-1 text-gray-900">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum repellat numquam repudiandae odit eum sunt veniam, optio sint sapiente, inventore aliquid? Optio veritatis assumenda architecto earum distinctio, dolores laborum et.</p>
+                    <p class="pt-1 text-gray-900">London Bridge adalah jembatan penyebrangan sungai Thames tertua di London. Jembatan ini didirikan tahun 1970an, meskipun demikian, bangunan sebelumnya sudah ada sejak tahun 53 Masehi.</p>
             </div>
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/Kyoto.jpg') }}>
@@ -372,7 +378,7 @@ Alternatively if you want to just have a single hero
                             <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
                         </svg>
                     </div>
-                    <p class="pt-1 text-gray-900">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore architecto temporibus sapiente officiis, delectus quidem consectetur numquam aut quas autem natus consequuntur illo odio similique accusantium, distinctio expedita pariatur! Vero.</p>
+                    <p class="pt-1 text-gray-900">Kyoto adalah salah satu prefektur di Jepang yang populer di antara wisatawan mancanegara. Kyoto dikenal menjadi pusat kebudayaan dan seni Jepang. Wisatawan dengan mudah akan menemukan kuil-kuil bersejarah, rumah-rumah tradisional, dan event tradisional di Kyoto. </p>
             </div>
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/Beijing.jfif') }}>
@@ -382,7 +388,7 @@ Alternatively if you want to just have a single hero
                             <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
                         </svg>
                     </div>
-                    <p class="pt-1 text-gray-900">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, error doloremque deleniti, et quibusdam magni dolore nam illum quis odio accusantium numquam aliquam, nisi iste tenetur? Modi laboriosam consequuntur voluptates?</p>
+                    <p class="pt-1 text-gray-900">Beijing merupakan kota yang sudah dikenal secara umum oleh orang banyak, yaitu merupakan Ibu Kota dari negara Tiongkok. Setiap orang pasti mengenal dengan tujuan-tujuan wisata ikonik Beijing seperti Great Wall, Tiananmen Square, Olympic Park, Temple of Heaven dan destinasi lainnya. </p>
             </div>
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                     <img class="hover:grow hover:shadow-lg" src={{ asset('/images/korea.jpg') }}>
@@ -392,7 +398,7 @@ Alternatively if you want to just have a single hero
                             <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
                         </svg>
                     </div>
-                    <p class="pt-1 text-gray-900">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vel facere sunt nemo dolor quod asperiores laudantium accusantium adipisci aspernatur sed suscipit, et nulla unde voluptate, eius est atque! Architecto!</p>
+                    <p class="pt-1 text-gray-900">Salah satu tempat wisata di Korea Selatan yang wajib Anda kunjungi. Terletak di jantung Kota Seoul, Istana Gyeongbokgung salah satu bangunan/istana paling ikonik di negara ini juga merupakan istana terbesar dari 5 istana besar di Korea yang masih ada</p>
             </div>
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
@@ -403,68 +409,250 @@ Alternatively if you want to just have a single hero
                             <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
                         </svg>
                     </div>
-                    <p class="pt-1 text-gray-900">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vel facere sunt nemo dolor quod asperiores laudantium accusantium adipisci aspernatur sed suscipit, et nulla unde voluptate, eius est atque! Architecto!</p>
+                    <p class="pt-1 text-gray-900">Istana di India yang satu ini berada di Gujarat, Negara India bagian barat tepatnya di Kota Vadodara. Istana ini dikenal dengan nama Lakhsmi Vilas Palace dan dibangun pada tahun 1890 diatas lahan seluas 2 kilometer.</p>
             </div>
             </div>
     </section>
 
-    <footer class="bg-gray-700 text-gray-100 x-2 pt-0 pb-2 mt-0">
-        <div class="container mx-auto py-8">
-            <div class="flex flex-wrap mb-2 px-4">
-                <!--Col 1-->
-                <div class="w-full md:w-1/3 text-center md:text-left px-3 mb-2 md:mb-0 pb-3 sm:pb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsa voluptas sed eum distinctio debitis ea cumque! Repellendus, eos ex voluptas ratione debitis error et assumenda accusantium voluptatum, sequi placeat!</div></div>
-                <!--Col 2-->
-                <div class="w-full md:w-1/3 text-center md:text-left px-3 mb-2 md:mb-0 pb-3 sm:pb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quis alias ut dolores, minima nesciunt earum eum accusamus quisquam illo exercitationem nihil mollitia dolor repellendus placeat delectus reiciendis sed consectetur.</div></div>
-                <!--Col 3-->
-                <div class="w-full md:w-1/3 text-center md:text-left px-3 mb-2 md:mb-0 pb-3 sm:pb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ut, hic qui ea sequi repudiandae neque! Alias eaque excepturi nostrum nesciunt sed esse, distinctio sequi, consectetur, asperiores voluptatem accusantium voluptas.</div></div>
+    <footer class="text-gray-600 body-font">
+        <div
+          class="
+            container
+            px-5
+            py-24
+            mx-auto
+            flex
+            md:items-center
+            lg:items-start
+            md:flex-row md:flex-nowrap
+            flex-wrap flex-col
+          "
+        >
+          <div
+            class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
+          >
+            <a
+              href=""
+              class="
+                flex
+                title-font
+                font-medium
+                items-center
+                md:justify-start
+                justify-center
+                text-gray-900
+              "
+            >
+              <i class="fas fa-cubes fa-lg text-purple-500"></i>
+              <span class="ml-3 text-xl">Tailwind elements</span>
+            </a>
+            <p class="mt-2 text-sm text-gray-500">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
+              quam?
+            </p>
+          </div>
+          <div
+            class="
+              flex-grow flex flex-wrap
+              md:pl-20
+              -mb-10
+              md:mt-0
+              mt-10
+              md:text-left
+              text-center
+            "
+          >
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2
+                class="
+                  title-font
+                  font-medium
+                  text-gray-900
+                  tracking-widest
+                  text-sm
+                  mb-3
+                "
+              >
+                CATEGORIES
+              </h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >First Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Second Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Third Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Fourth Link</a
+                  >
+                </li>
+              </nav>
             </div>
-        </div>
-    </footer>
-    {{-- Tambahin Search Bar dibawah Carousel!--}}
-    {{-- Dikomen Dulu NANTI ISI INGET!!! --}}
-    {{-- <section class="bg-white py-8">
-
-        <div class="container py-8 px-6 mx-auto">
-
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
-			About
-		</a>
-
-            <p class="mt-8 mb-8">This template is inspired by the stunning nordic minamalist design - in particular:
-                <br>
-                <a class="text-gray-800 underline hover:text-gray-900" href="http://savoy.nordicmade.com/" target="_blank">Savoy Theme</a> created by <a class="text-gray-800 underline hover:text-gray-900" href="https://nordicmade.com/">https://nordicmade.com/</a> and <a class="text-gray-800 underline hover:text-gray-900" href="https://www.metricdesign.no/" target="_blank">https://www.metricdesign.no/</a></p>
-
-            <p class="mb-8">Lorem ipsum dolor sit amet, consectetur <a href="#">random link</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis mattis aliquam. In est ante in nibh mauris. Egestas congue quisque egestas diam in. Facilisi nullam vehicula ipsum a arcu. Nec nam aliquam sem et tortor consequat. Eget mi proin sed libero enim sed faucibus turpis in. Hac habitasse platea dictumst quisque. In aliquam sem fringilla ut. Gravida rutrum quisque non tellus orci ac auctor augue mauris. Accumsan lacus vel facilisis volutpat est velit egestas dui id. At tempor commodo ullamcorper a. Volutpat commodo sed egestas egestas fringilla. Vitae congue eu consequat ac.</p>
-
-        </div>
-
-    </section>
-
-    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
-        <div class="container flex px-3 py-8 ">
-            <div class="w-full mx-auto flex flex-wrap">
-                <div class="flex w-full lg:w-1/2 ">
-                    <div class="px-3 md:px-0">
-                        <h3 class="font-bold text-gray-900">About</h3>
-                        <p class="py-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
-                    <div class="px-3 md:px-0">
-                        <h3 class="font-bold text-gray-900">Social</h3>
-                        <ul class="list-reset items-center pt-3">
-                            <li>
-                                <a class="inline-block no-underline hover:text-black hover:underline py-1" href="#">Add social links</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2
+                class="
+                  title-font
+                  font-medium
+                  text-gray-900
+                  tracking-widest
+                  text-sm
+                  mb-3
+                "
+              >
+                CATEGORIES
+              </h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >First Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Second Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Third Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Fourth Link</a
+                  >
+                </li>
+              </nav>
             </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2
+                class="
+                  title-font
+                  font-medium
+                  text-gray-900
+                  tracking-widest
+                  text-sm
+                  mb-3
+                "
+              >
+                CATEGORIES
+              </h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >First Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Second Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Third Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Fourth Link</a
+                  >
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2
+                class="
+                  title-font
+                  font-medium
+                  text-gray-900
+                  tracking-widest
+                  text-sm
+                  mb-3
+                "
+              >
+                CATEGORIES
+              </h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >First Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Second Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Third Link</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-gray-600 hover:text-gray-800"
+                    >Fourth Link</a
+                  >
+                </li>
+              </nav>
+            </div>
+          </div>
         </div>
-    </footer>
-
-</body>
-
-</html> --}}
+        <div class="bg-gray-100">
+          <div
+            class="
+              container
+              mx-auto
+              py-4
+              px-5
+              flex flex-wrap flex-col
+              sm:flex-row
+            "
+          >
+            <p class="text-gray-500 text-sm text-center sm:text-left">
+              © 2021 Copyright:
+              <a
+                href="https://www.tailwind-elements.com/"
+                class="text-gray-600 ml-1"
+                target="_blank"
+                >Tailwind Elements</a
+              >
+            </p>
+            <span
+              class="
+                inline-flex
+                sm:ml-auto sm:mt-0
+                mt-2
+                justify-center
+                sm:justify-start
+              "
+            >
+              <a href="" class="text-gray-500">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="" class="ml-3 text-gray-500">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="ml-3 text-gray-500">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="" class="ml-3 text-gray-500">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="" class="ml-3 text-gray-500">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>

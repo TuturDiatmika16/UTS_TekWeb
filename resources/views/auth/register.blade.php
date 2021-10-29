@@ -32,28 +32,41 @@
             <label for="name" class="text-4xl font-bold">Let's Join Us!</label> 
         </div>
         <section>
-            <form class="flex flex-col pt-3" onsubmit="event.preventDefault();">
+            <form action="{{ route('register') }}"method="post" class="flex flex-col pt-3">
+                @csrf
                 <div class="flex flex-col pt-1">
                     <label for="name" class="text-lg">Name</label>
-                    <input type="text" id="name" placeholder="Username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
+                    <input type="text" id="name" name="name" placeholder="Username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
+                    @error('name')
+                        {{$message}}
+                    @enderror
                 </div>
 
                 <div class="flex flex-col pt-4">
                     <label for="email" class="text-lg">Email</label>
-                    <input type="email" id="email" placeholder="Email Address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
+                    <input type="email" id="email" name="email" placeholder="Email Address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
+                    @error('email')
+                        {{$message}}
+                    @enderror
                 </div>
 
                 <div class="flex flex-col pt-4">
                     <label for="password" class="text-lg">Password</label>
-                    <input type="password" id="password" placeholder="Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
+                    <input type="password" id="password" name="password" placeholder="Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
+                    @error('password')
+                        {{$message}}
+                    @enderror
                 </div>
 
                 <div class="flex flex-col pt-4">
                     <label for="confirm-password" class="text-lg">Confirm Password</label>
-                    <input type="password" id="confirm-password" placeholder="Confirm Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
+                    <input type="password" id="confirm-password" name="password_confirmation" placeholder="Confirm Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
+                    @error('confirm')
+                        {{$message}}
+                    @enderror
                 </div>
 
-                <input type="submit" value="Register" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8" />
+                <button type="submit" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8">Register</button>
             </form>
         </section>
     </main>
