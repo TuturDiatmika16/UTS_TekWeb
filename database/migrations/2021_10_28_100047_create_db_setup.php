@@ -34,8 +34,9 @@ class CreateDbSetup extends Migration
             $table->id();
             $table->unsignedBigInteger('asal');
             $table->unsignedBigInteger('tujuan');
-            $table->date('waktu_keberangkatan');
-            $table->date('waktu_tiba');
+            $table->date('tanggal_keberangkatan');
+            $table->date('tanggal_pulang')->nullable();
+            $table->integer('jumlah_penumpang');
             $table->timestamps();
         });
 

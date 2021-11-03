@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PenerbanganController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,24 +15,37 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.landing');
+    return view('user.landing');
 })->name('landing');
 
 Route::get('/login', function () {
     return view('login');
 })->middleware(['auth'])->name('login');
 
+Route::get('/dashboard', [PenerbanganController::class, 'index'])
+    ->name('dashboard');
+
+Route::post('/cariPenerbangan', [PenerbanganController::class, 'store'])
+    ->name('cariPenerbangan');
+
+
+
+Route::get('/ticket', function () {
+    return view('user.ticket');
+});
+
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+})->name('adminDashboard');
+
+Route::get('/user', function () {
+    return view('admin.user');
+})->name('user');
+
+Route::get('/penerbangan', function () {
+    return view('admin.penerbangan');
+})->name('penerbangan');
+
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/admin', function () {
-        return view('admin.admin');
-    });
-
-    Route::get('/dashboard', function () {
-        return view('layouts.beranda');
-    })->name('dashboard');
-
-    Route::get('/ticket', function () {
-        return view('layouts.ticket');
-    });
 });
 require __DIR__ . '/auth.php';

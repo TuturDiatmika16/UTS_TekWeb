@@ -210,14 +210,16 @@ Alternatively if you want to just have a single hero
 </section>
 
 -->
-    <div class="grid">
+    <form action="{{ route('cariPenerbangan') }}" method="POST" class="grid">
+      @csrf
         <div class="pt-5 px-8 shadow-md rounded-md text-center font-bold" style="max-width: 100%">
             <label class="block">
-            <span class="text-gray-700">Cari Harga Tiket Pesawat Murah dan Terjangkau Disini!</span>
+            <span class="text-black-700">Cari Harga Tiket Pesawat Murah dan Terjangkau Disini!</span>
             </label>
             <div>
                 <label class="inline-flex items-center">
                   <input
+                    id="sj"
                     type="radio"
                     class="form-radio"
                     name="radio"
@@ -227,66 +229,67 @@ Alternatively if you want to just have a single hero
                   <span class="ml-2">Sekali Jalan</span>
                 </label>
                 <label class="inline-flex items-center">
-                  <input type="radio" class="form-radio" name="radio" value="2" />
+                  <input id="pp" type="radio" class="form-radio" name="radio" value="2" />
                   <span class="ml-2">Pulang-Pergi</span>
                 </label>
               </div>
               <br>
 
-            <div class="grid grid-cols-6">
+            <div class="grid grid-cols-3">
                 <label class="block text-left" style="max-width: 400px">
-                    <span class="text-gray-700">Lokasi Dari</span>
-                        <select class="form-select block w-full mt-1">
-                            <option>Jakarta</option>
-                            <option>Bandung</option>
-                            <option>Yogyakarta</option>
-                            <option>Palembang</option>
-                            <option>Solo</option>
-                            <option>Semarang</option>
-                            <option>Bali</option>
-                            <option>Medan</option>
-                            <option>Surabaya</option>
-                            <option>Malang</option>
-                            <option>Bogor</option>
-                            <option>Makassar</option>
-                        </select>
+                    <span class="text-black-700">Lokasi Dari</span>
+                    <select class="form-select block w-full mt-1" name="asal">
+                          @foreach ($lokasi as $item)
+                          <option value="{{$item->id}}">{{$item->nm_lokasi}}</option>
+                          @endforeach
+                    </select>
+                    @error('asal')
+                        {{$message}}
+                    @enderror
                 </label>
                 <label class="block text-left" style="max-width: 400px">
-                    <span class="text-gray-700">Tujuan</span>
-                        <select class="form-select block w-full mt-1">
-                            <option>Bali</option>
-                            <option>Medan</option>
-                            <option>Surabaya</option>
-                            <option>Malang</option>
-                            <option>Bogor</option>
-                            <option>Makassar</option>
-                            <option>Jakarta</option>
-                            <option>Bandung</option>
-                            <option>Yogyakarta</option>
-                            <option>Palembang</option>
-                            <option>Solo</option>
-                            <option>Semarang</option>
-                        </select>
+                    <span class="text-black-700">Tujuan</span>
+                    <select class="form-select block w-full mt-1" name="tujuan">
+                      @foreach ($lokasi as $item)
+                      <option value="{{$item->id}}">{{$item->nm_lokasi}}</option>
+                      @endforeach
+                    </select>
+                    @error('tujuan')
+                        {{$message}}
+                    @enderror
                 </label>
                 <label class="block text-left" style="max-width: 400px">
-                    
-                    <span class="text-gray-700">Berangkat</span>
-                    <input type="date" class="form-date" name="date" value="2" />
+                    <span class="text-black-700">Berangkat</span>
+                    <input type="date" class="form-date" name="tanggal_keberangkatan" value="2" />
+                    @error('tanggal_keberangkatan')
+                        {{$message}}
+                    @enderror
                 </label>
-                <label class="block text-left" style="max-width: 400px">
-                    <span class="text-gray-700">Pulang</span>
-                    <input type="date" class="form-date" name="date" value="2" />
+                <label id="pulang" class="block text-left hidden" style="max-width: 400px">
+                    <span class="text-black-700">Pulang</span>
+                    <input type="date" class="form-date" name="tanggal_pulang" value="2" />
+                    @error('tanggal_pulang')
+                        {{$message}}
+                    @enderror
                 </label>
-                <label class="block text-left" style="max-width: 400px">
-                    <span class="text-gray-700">Penumpang</span>
-                        <select class="form-select block w-full mt-1">
-                            <option>Dewasa</option>
-                            <option>Remaja</option>
-                            <option>Anak-anak</option>
-                        </select>
+                <div class="">
+                  <label class="block text-left" style="max-width: 400px">
+                    <span class="text-black-700">Jumlah Penumpang</span>
                 </label>
+                  <label class="block text-left" style="max-width: 400px">
+                    <span class="text-gray-700">Dewasa
+                      <input type="number" placeholder="0" class="form-select block w-full mt-1" id="selectPenumpang" name="dewasa" />
+                    </span>
+                    <span class="text-gray-700">Remaja
+                      <input type="number" placeholder="0" class="form-select block w-full mt-1" id="selectPenumpang" name="remaja" />
+                    </span>
+                    <span class="text-gray-700">Anak - Anak
+                      <input type="number" placeholder="0" class="form-select block w-full mt-1" id="selectPenumpang" name="anak"/>
+                    </span>
+                </label>
+                </div>
                 <label class="block text-left" style="max-width: 400px">
-                    <span class="text-gray-700">Kelas</span>
+                    <span class="text-black-700">Kelas</span>
                         <select class="form-select block w-full mt-1">
                             <option>VVIP</option>
                             <option>VIP</option>
@@ -297,12 +300,12 @@ Alternatively if you want to just have a single hero
                 </label>
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+                <button type="submit" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
                   Cari Penerbangan!
                 </button>
             </div>
         </div>
-    </div>
+    </form>
 
 
   {{-- Most Popular Journey! --}}
@@ -620,13 +623,7 @@ Alternatively if you want to just have a single hero
             "
           >
             <p class="text-gray-500 text-sm text-center sm:text-left">
-              © 2021 Copyright:
-              <a
-                href="https://www.tailwind-elements.com/"
-                class="text-gray-600 ml-1"
-                target="_blank"
-                >Tailwind Elements</a
-              >
+              © 2021 Copyright: Diatmika's Travel
             </p>
             <span
               class="
@@ -656,3 +653,17 @@ Alternatively if you want to just have a single hero
           </div>
         </div>
       </footer>
+
+<script>
+  const sj = document.getElementById('sj');
+  const pp = document.getElementById('pp');
+  const pulang = document.getElementById('pulang');
+
+  sj.addEventListener('change', function() {
+    pulang.classList.toggle('hidden');
+  })
+  pp.addEventListener('change', function() {
+    pulang.classList.toggle('hidden');
+  })
+
+</script>
