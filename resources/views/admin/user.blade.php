@@ -49,9 +49,9 @@
                 <tbody>
             
                 <tr class="bg-blue-200 lg:text-black">
-                    <td class="p-3 font-medium capitalize">Gazi Rahad</td>
-                    <td class="p-3">gazi.rahad871@gmail.com</td>
-                    <td class="p-3">01648349009</td>
+                    <td class="p-3 font-medium capitalize"></td>
+                    <td class="p-3"></td>
+                    <td class="p-3"></td>
 
                     <td class="p-3">
                     <span class="bg-green-400 text-gray-50 rounded-md px-2"
@@ -60,23 +60,23 @@
                     </td>
                     <td class="p-3">
                     <a href="#" class="text-gray-500 hover:text-gray-100 mr-2">
-                        <i class="material-icons-outlined text-base">visibility</i>
+                        <i class="material-icons-outlined text-base"></i>
                     </a>
                     <a href="#" class="text-yellow-400 hover:text-gray-100 mx-2">
-                        <i class="material-icons-outlined text-base">edit</i>
+                        <i class="material-icons-outlined text-base"></i>
                     </a>
                     <a
                         href="#"
                         class="text-red-400 hover:text-gray-100 ml-2"
                     >
-                        <i class="material-icons-round text-base">delete_outline</i>
+                        <i class="material-icons-round text-base"></i>
                     </a>
                     </td>
                 </tr>
             <tr class="bg-blue-200 lg:text-black">
-                    <td class="p-3 font-medium capitalize">Arif Uddin</td>
-                    <td class="p-3">gazi.rahad871@gmail.com</td>
-                    <td class="p-3">01648349009</td>
+                    <td class="p-3 font-medium capitalize"></td>
+                    <td class="p-3"></td>
+                    <td class="p-3"></td>
 
                     <td class="p-3">
                     <span class="bg-green-400 text-gray-50 rounded-md px-2"
@@ -85,23 +85,23 @@
                     </td>
                     <td class="p-3">
                     <a href="#" class="text-gray-500 hover:text-gray-100 mr-2">
-                        <i class="material-icons-outlined text-base">visibility</i>
+                        <i class="material-icons-outlined text-base"></i>
                     </a>
                     <a href="#" class="text-yellow-400 hover:text-gray-100 mx-2">
-                        <i class="material-icons-outlined text-base">edit</i>
+                        <i class="material-icons-outlined text-base"></i>
                     </a>
                     <a
                         href="#"
                         class="text-red-400 hover:text-gray-100 ml-2"
                     >
-                        <i class="material-icons-round text-base">delete_outline</i>
+                        <i class="material-icons-round text-base"></i>
                     </a>
                     </td>
                 </tr>
                     <tr class="bg-blue-200 lg:text-black">
-                    <td class="p-3 font-medium capitalize">Rubel Amin</td>
-                    <td class="p-3">gazi.rahad871@gmail.com</td>
-                    <td class="p-3">01648349010</td>
+                    <td class="p-3 font-medium capitalize"></td>
+                    <td class="p-3"></td>
+                    <td class="p-3"></td>
 
                     <td class="p-3">
                     <span class="bg-green-400 text-gray-50 rounded-md px-2"
@@ -110,16 +110,16 @@
                     </td>
                     <td class="p-3">
                     <a href="#" class="text-gray-500 hover:text-gray-100 mr-2">
-                        <i class="material-icons-outlined text-base">visibility</i>
+                        <i class="material-icons-outlined text-base"></i>
                     </a>
                     <a href="#" class="text-yellow-400 hover:text-gray-100 mx-2">
-                        <i class="material-icons-outlined text-base">edit</i>
+                        <i class="material-icons-outlined text-base"></i>
                     </a>
                     <a
                         href="#"
                         class="text-red-400 hover:text-gray-100 ml-2"
                     >
-                        <i class="material-icons-round text-base">delete_outline</i>
+                        <i class="material-icons-round text-base"></i>
                     </a>
                     </td>
                 </tr>

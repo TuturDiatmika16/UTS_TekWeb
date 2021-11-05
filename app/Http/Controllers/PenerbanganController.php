@@ -20,6 +20,15 @@ class PenerbanganController extends Controller
             'lokasi' => $lokasi,
         ]);
     }
+    public function showData()
+    {
+
+        $penerbangan = penerbangan::all();
+
+        return view('admin.penerbangan', [
+            'penerbangan' => $penerbangan,
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.

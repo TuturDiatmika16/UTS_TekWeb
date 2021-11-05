@@ -11,12 +11,12 @@ class penerbangan extends Model
     protected $table = "penerbangan";
     protected $guarded = []; // table apa saja yang tidak boleh di isi
 
-    public function asal()
+    public function asalLokasi()
     {
         return $this->belongsTo(lokasi::class, 'asal', 'id');
     }
 
-    public function tujuan()
+    public function tujuanLokasi()
     {
         return $this->belongsTo(lokasi::class, 'tujuan', 'id');
     }

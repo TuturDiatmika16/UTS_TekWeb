@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PenerbanganController;
+use App\Http\Controllers\LokasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +29,18 @@ Route::get('/dashboard', [PenerbanganController::class, 'index'])
 Route::post('/cariPenerbangan', [PenerbanganController::class, 'store'])
     ->name('cariPenerbangan');
 
+Route::get('/lokasi', [LokasiController::class, 'index'])
+    ->name('lokasi');
 
+Route::get('/penerbangan', [PenerbanganController::class, 'showData'])
+    ->name('penerbangan');
+
+Route::get('/tambahLokasi', function () {
+    return view('admin.tambahLokasi');
+})->name('tambahLokasi');
+
+Route::get('/saveLokasi', [LokasiController::class, 'tambahLokasi'])
+    ->name('saveLokasi');
 
 Route::get('/ticket', function () {
     return view('user.ticket');
@@ -41,10 +53,6 @@ Route::get('/admin', function () {
 Route::get('/user', function () {
     return view('admin.user');
 })->name('user');
-
-Route::get('/penerbangan', function () {
-    return view('admin.penerbangan');
-})->name('penerbangan');
 
 Route::group(['middleware' => ['auth']], function () {
 });
